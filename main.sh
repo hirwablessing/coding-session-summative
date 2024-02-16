@@ -1,5 +1,6 @@
 FILE="students-list_1023.txt"
 
+# function to display the menu for the user
 display_menu() {
   echo "1. Create Student Record"
   echo "2. View All Student Records"
