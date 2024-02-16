@@ -1,3 +1,5 @@
+#!/bin/bash
+
 FILE="students-list_1023.txt"
 
 # function to display the menu for the user
