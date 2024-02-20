@@ -1,3 +1,5 @@
+#!/bin/bash
+
 FILE="students-list_1023.txt"
 
 # function to display the menu for the user
@@ -17,4 +19,11 @@ display_menu() {
     5) exit 0;;
     *) echo "Invalid option. Please try again."; display_menu;;
   esac
+}
+
+delete_record() {
+  read -p "Enter student ID to delete: " student_id
+  grep -v "^$student_id," $FILE > temp.txt && mv temp.txt $FILE
+  echo "Record deleted."
+  display_menu
 }
