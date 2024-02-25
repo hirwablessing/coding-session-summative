@@ -68,7 +68,7 @@ You can choose any option from the app menu to play around with the app.
 - **Delete Student Record**: Remove a student record from the list using their student ID.
 - **Extract and Sort Emails**: Generate a list of student emails, sorted alphabetically.
 
-## Contributors
+## Contributors (Negpod 25)
 
 - Hammed Agbaje
 - Aubert Bihibindi
