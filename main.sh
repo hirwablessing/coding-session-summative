@@ -32,16 +32,18 @@ update_record(){
     read -p "Enter student ID to update: " student_id
       if grep -q "^$student_id," $FILE; then
         # Temporarily store records excluding the one to update
-    grep -v "^$student_id," $FILE > temp.txt
-    mv temp.txt $FILE # Replace the original file with the temp file
-     # Get new details and append them
-    read -p "Enter new student email: " email
-    read -p "Enter new student age: " age
-     echo "$student_id,$email,$age" >> $FILE
-    echo "Record updated."
+        grep -v "^$student_id," $FILE > temp.txt
+        mv temp.txt $FILE # Replace the original file with the temp file
+        # Get new details and append them
+        read -p "Enter new student email: " email
+        read -p "Enter new student age: " age
+        echo "$student_id,$email,$age" >> $FILE
+        echo "Record updated."
       else
-    echo "Student ID not found."
-  fi
+        echo "Student ID not found."
+      fi
+      display_menu
+
 } 
 view_records() {
   if [ -f $FILE ]; then
