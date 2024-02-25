@@ -39,4 +39,6 @@ update_record(){
     read -p "Enter new student age: " age
      echo "$student_id,$email,$age" >> $FILE
     echo "Record updated."
+      else
+    echo "Student ID not found."
 }
