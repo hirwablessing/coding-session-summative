@@ -21,6 +21,17 @@ display_menu() {
   esac
 }
 
+create_record() {
+  # this function will create a new student record
+  # author: @hirwablessing
+  read -p "Enter student email: " email
+  read -p "Enter student age: " age
+  read -p "Enter student ID: " student_id
+  echo "$student_id,$email,$age" >> $FILE
+  echo "Student record created."
+  display_menu
+}
+
 delete_record() {
   read -p "Enter student ID to delete: " student_id
   grep -v "^$student_id," $FILE > temp.txt && mv temp.txt $FILE
