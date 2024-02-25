@@ -23,7 +23,7 @@ display_menu() {
 
 create_record() {
   # this function will create a new student record
-  # author: @hirwablessing
+  # author: @patrickniyogitare28
   read -p "Enter student email: " email
   read -p "Enter student age: " age
   read -p "Enter student ID: " student_id
