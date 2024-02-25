@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# NOTE: Avoid storing plain-text passwords in scripts to prevent exposure and unauthorized access. 
+# SECURITY NOTE: Avoid storing plain-text passwords in scripts to prevent exposure and unauthorized access. 
 # Opt for secure alternatives like SSH keys for automation.
 
 # Configuration variables
