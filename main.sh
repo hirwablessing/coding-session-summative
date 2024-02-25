@@ -41,6 +41,14 @@ update_record(){
     echo "Record updated."
       else
     echo "Student ID not found."
-     fi
-  display_menu
+  fi
 } 
+view_records() {
+  if [ -f $FILE ]; then
+    echo "Student ID, Email, Age"
+    cat $FILE
+  else
+    echo "No records found."
+  fi
+  display_menu
+}
