@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FILE="students-list_1023.txt"
+FILE_NAME="students-list_1023.txt"
 
 # function to display the menu for the user
 display_menu() {
@@ -27,14 +27,14 @@ create_record() {
   read -p "Enter student email: " email
   read -p "Enter student age: " age
   read -p "Enter student ID: " student_id
-  echo "$student_id,$email,$age" >> $FILE
+  echo "$student_id,$email,$age" >> $FILE_NAME
   echo "Student record created."
   display_menu
 }
 
 delete_record() {
   read -p "Enter student ID to delete: " student_id
-  grep -v "^$student_id," $FILE > temp.txt && mv temp.txt $FILE
+  grep -v "^$student_id," $FILE_NAME > temp.txt && mv temp.txt $FILE_NAME
   echo "Record deleted."
   display_menu
 }
@@ -42,14 +42,14 @@ delete_record() {
 update_record(){
     read -p "Enter student ID to update: " student_id
     # Check if the student record exists
-      if grep -q "^$student_id," $FILE; then
+      if grep -q "^$student_id," $FILE_NAME; then
         # Temporarily store records excluding the one to update
-        grep -v "^$student_id," $FILE > temp.txt
-        mv temp.txt $FILE # Replace the original file with the temp file
+        grep -v "^$student_id," $FILE_NAME > temp.txt
+        mv temp.txt $FILE_NAME # Replace the original file with the temp file
         # Get new details and append them
         read -p "Enter new student email: " email
         read -p "Enter new student age: " age
-        echo "$student_id,$email,$age" >> $FILE
+        echo "$student_id,$email,$age" >> $FILE_NAME
         echo "Record updated."
       else
         echo "Student ID not found."
@@ -58,9 +58,9 @@ update_record(){
 
 } 
 view_records() {
-  if [ -f $FILE ]; then
+  if [ -f $FILE_NAME ]; then
     echo "Student ID, Email, Age"
-    cat $FILE
+    cat $FILE_NAME
   else
     echo "No records found."
   fi
