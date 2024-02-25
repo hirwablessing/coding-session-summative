@@ -34,4 +34,9 @@ update_record(){
         # Temporarily store records excluding the one to update
     grep -v "^$student_id," $FILE > temp.txt
     mv temp.txt $FILE # Replace the original file with the temp file
+     # Get new details and append them
+    read -p "Enter new student email: " email
+    read -p "Enter new student age: " age
+     echo "$student_id,$email,$age" >> $FILE
+    echo "Record updated."
 }
