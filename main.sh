@@ -55,3 +55,4 @@ view_records() {
   fi
   display_menu
 }
+display_menu
