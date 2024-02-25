@@ -25,10 +25,10 @@ display_menu() {
 #function will create a new student record
 # author: @patrickniyogitare28
 create_record() {
-  read -p "Enter student email: " email
-  read -p "Enter student age: " age
-  read -p "Enter student ID: " student_id
-  echo "$student_id,$email,$age" >> $FILE_NAME
+  read -p "Enter student email: " email # Read email from terminal
+  read -p "Enter student age: " age # Read age from terminal
+  read -p "Enter student ID: " student_id # Read Student Id
+  echo "$student_id,$email,$age" >> $FILE_NAME # Write read data into a file
   echo "Student record created."
   display_menu
 }
