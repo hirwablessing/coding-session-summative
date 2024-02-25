@@ -29,5 +29,5 @@ delete_record() {
 }
 
 update_record(){
-  
+    read -p "Enter student ID to update: " student_id
 }
