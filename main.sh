@@ -22,7 +22,7 @@ display_menu() {
   esac
 }
 
-# this function will create a new student record
+#function will create a new student record
 # author: @patrickniyogitare28
 create_record() {
   read -p "Enter student email: " email
@@ -33,6 +33,7 @@ create_record() {
   display_menu
 }
 
+# function to delete student record
 delete_record() {
   read -p "Enter student ID to delete: " student_id
   grep -v "^$student_id," $FILE_NAME > temp.txt && mv temp.txt $FILE_NAME
@@ -40,6 +41,7 @@ delete_record() {
   display_menu
 }
 
+# function to update student record
 update_record(){
     read -p "Enter student ID to update: " student_id
     # Check if the student record exists
@@ -58,6 +60,8 @@ update_record(){
       display_menu
 
 } 
+
+# function to view all students records
 view_records() {
   if [ -f $FILE_NAME ]; then
     echo "Student ID, Email, Age"
