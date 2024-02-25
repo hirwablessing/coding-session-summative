@@ -2,7 +2,8 @@
 
 FILE_NAME="students-list_1023.txt"
 
-# function to display the menu for the user
+# function to display the app menu
+# author: @hirwablessing
 display_menu() {
   echo "1. Create Student Record"
   echo "2. View All Student Records"
@@ -21,9 +22,9 @@ display_menu() {
   esac
 }
 
+# this function will create a new student record
+# author: @patrickniyogitare28
 create_record() {
-  # this function will create a new student record
-  # author: @patrickniyogitare28
   read -p "Enter student email: " email
   read -p "Enter student age: " age
   read -p "Enter student ID: " student_id
