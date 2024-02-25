@@ -30,4 +30,8 @@ delete_record() {
 
 update_record(){
     read -p "Enter student ID to update: " student_id
+      if grep -q "^$student_id," $FILE; then
+        # Temporarily store records excluding the one to update
+    grep -v "^$student_id," $FILE > temp.txt
+    mv temp.txt $FILE # Replace the original file with the temp file
 }
