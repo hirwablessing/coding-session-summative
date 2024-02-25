@@ -41,4 +41,6 @@ update_record(){
     echo "Record updated."
       else
     echo "Student ID not found."
-}
+     fi
+  display_menu
+} 
