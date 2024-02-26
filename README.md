@@ -70,7 +70,7 @@ You can choose any option from the app menu to play around with the app.
 
 ## Contributors (Negpod 25)
 
-- Hammed Agbaje
+- Hammed Ayomide Agbaje
 - Aubert Bihibindi
 - Blessing Hirwa
 - Nicole Mukundwa
